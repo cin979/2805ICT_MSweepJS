@@ -1,1 +1,20 @@
-<p>game works!</p>
+<html ng-app="app-game">
+  <head>
+    <p>Welcome To Minesweeper</p>
+  </head>
+  <body style="background:lightgrey; margin: 5px; border-color:white; border-width: 5px; border-style: outset">
+    <form style="padding:10px; padding-bottom:0px; width:17%; height:100%; border-right: 3px white solid">
+      <fieldset>
+        <button type="button" class="btn btn-block btn-outline-secondary" style="margin-bottom: 10px">New Game</button>
+        <p>
+          <label style="margin-right: 5px">Difficulty</label>
+          <select>
+            <option value = "easy">Easy</option>
+            <option value = "medium">Medium</option>
+            <option value = "hard">Hard</option>
+          </select>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
