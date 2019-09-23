@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { boardCreation } from '../../assets/js/boardCreation.js';
+import { boardCreation } from '../../assets/boardCreation';
 
 @Component({
   selector: 'app-game',
@@ -16,8 +16,8 @@ export class GameComponent implements OnInit {
   ngOnInit() { };
 
   newGame() {
-    var field = boardCreation(10,10);
-    field.forEach((element: { isBomb: any; }) => {
+    var field = new boardCreation(10, 10);
+    field.tiles.forEach((element) => {
         console.log(element.isBomb);
     });
   }
