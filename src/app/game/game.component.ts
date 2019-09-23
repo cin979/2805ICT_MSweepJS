@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare function makeNewBoard(number, number): any;
-
+import { boardCreation } from '../../assets/js/boardCreation.js';
 
 @Component({
   selector: 'app-game',
@@ -9,10 +8,17 @@ declare function makeNewBoard(number, number): any;
 })
 
 export class GameComponent implements OnInit {
-  constructor() {};
+  selectedDifficulty:string;
+  difficulties = ['Easy', 'Normal', 'Hard'];
 
-  ngOnInit() {
-    console.log(makeNewBoard(10,10));
-  };
+  constructor() { };
 
+  ngOnInit() { };
+
+  newGame() {
+    var field = boardCreation(10,10);
+    field.forEach((element: { isBomb: any; }) => {
+        console.log(element.isBomb);
+    });
+  }
 }
